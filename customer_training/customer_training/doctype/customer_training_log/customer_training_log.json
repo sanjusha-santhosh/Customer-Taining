@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:[training_id]",
+ "creation": "2025-04-30 16:56:49.805058",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fa1e",
+  "naming_series",
+  "training_id",
+  "customer",
+  "training_type",
+  "column_break_ff5f",
+  "start_date",
+  "end_date",
+  "duration_days",
+  "feedback_due_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fa1e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Training Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "CLT-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "training_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Training ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "training_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Training Type",
+   "options": "\nBasic\nAdvanced\nSpecial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "label": "Duration Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "feedback_due_date",
+   "fieldtype": "Date",
+   "label": "Feedback Due Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ff5f",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-30 17:21:41.123816",
+ "modified_by": "Administrator",
+ "module": "Customer Training",
+ "name": "Customer Training Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
